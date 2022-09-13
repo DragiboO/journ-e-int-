@@ -1,0 +1,250 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.bg {
+    position: relative;
+    background-image: url("img/MisterRedHat_six_different_magicians_on_a_boat_vibrant_cinemati_90171b05-a863-4028-93ec-544027cb8968-01.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.bg img {
+    width: 100%;
+    z-index: 0;
+}
+
+.blur {
+    backdrop-filter: blur(2px);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.content {
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+h1 {
+    font-family: 'Combo', cursive;
+    margin-top: 10px;
+    padding-top: 15px;
+    font-size: 4rem;
+    text-align: center;
+    background-color: rgba(255, 200, 145, 0.363);
+}
+
+.grid_member {
+    display: grid;
+    height: calc(100vh - 8rem);
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 1rem 10rem;
+    gap: 10%;
+}
+
+.member {
+    border-radius:2rem ;
+    max-width: 15rem;
+}
+
+.member {
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.member h3 {
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    width: 100%;
+    padding: 5px;
+    position: absolute;
+    bottom: 0;
+    border-radius: 0 0 2rem 2rem;
+}
+
+.m1 {
+    background-image: url('img/IMG_0433.png');
+}
+
+.m2 {
+    background-image: url('img/IMG_2636.jpg');
+}
+
+.m3 {
+    background-image: url('img/PXL_20201231_123608260._exported_16094181963262.jpg');
+}
+
+.m4 {
+    background-image: url('img/C5CCE3EF-A18D-4EDC-90E4-DFB2E6FD2B6D.jpg');
+}
+
+.m5 {
+    background-image: url('img/Screenshot_2022-09-09-13-44-53-86_1c337646f29875672b5a61192b9010f9.jpg');
+}
+
+.m6 {
+    background-image: url('img/Snapchat-1001585942.png')
+}
+
+#PresVoiture {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+}
+
+#PresVoiture img {
+    height: 80%;
+    border-radius: 1rem;
+}
+
+.texte_voiture {
+    width: 35%;
+}
+
+.texte_voiture h2 {
+    padding-bottom: 1rem;
+}
+
+#laJournee {
+    background-color: #474e5d;
+    font-family: Helvetica, sans-serif;
+}
+
+.title_timeline {
+    padding: 100px 0 50px 0;
+    font-size: 2rem;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.timeline {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+.container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+.container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: white;
+    border: 4px solid #FF9F55;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    left: 50%;
+}
+
+.left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+}
+
+.right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+}
+
+.right::after {
+    left: -16px;
+}
+
+.content_timeline {
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+}
+
+
+@media screen and (max-width: 600px) {
+    .timeline::after {
+        left: 31px;
+    }
+
+    .container {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+
+    .container::before {
+        left: 60px;
+        border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent white transparent transparent;
+    }
+
+    .left::after, .right::after {
+        left: 15px;
+    }
+
+    .right {
+        left: 0%;
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    color: #a8a8a8;
+    background-color: rgb(33, 33, 33);
+}
